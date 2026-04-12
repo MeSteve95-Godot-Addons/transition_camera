@@ -1,7 +1,7 @@
 ﻿using Godot;
 using System;
 
-public partial class TransitionData : RefCounted
+public partial class CameraTransitionData : RefCounted
 {
 	[Signal] public delegate void TransitionCompleteEventHandler();
 
@@ -21,8 +21,8 @@ public partial class TransitionData : RefCounted
 
 	public float StepMultiplier => Distance * TransitionSpeed;
 
-	public TransitionData() {}
-	public TransitionData(
+	public CameraTransitionData() {}
+	public CameraTransitionData(
 		Camera3D startCamera,
 		Camera3D endCamera,
 		float transitionSpeed,

@@ -5,7 +5,7 @@ public partial class TransitionCamera : Camera3D
 {
 	public static TransitionCamera Instance { get; private set; }
 
-	public TransitionData TransitionData { get; private set; }
+	public CameraTransitionData TransitionData { get; private set; }
 
 	public TransitionCamera()
 	{
@@ -41,7 +41,7 @@ public partial class TransitionCamera : Camera3D
 		if (transitionSpeed <= 0.0f)
 			throw new ArgumentException("Transition speed must be greater than zero.", nameof(transitionSpeed));
 
-		TransitionData = new TransitionData(
+		TransitionData = new CameraTransitionData(
 			startCamera,
 			targetCamera,
 			transitionSpeed,
